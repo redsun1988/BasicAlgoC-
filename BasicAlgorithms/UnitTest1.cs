@@ -30,7 +30,7 @@ namespace BasicAlgorithms
 
             bool isSorted = SortAlgorithms.EqualsByElements(resultSecquens, targetSequence);
 
-            Assert.IsTrue(false);
+            Assert.IsTrue(isSorted);
         }
     }
 }
