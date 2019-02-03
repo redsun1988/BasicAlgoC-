@@ -19,15 +19,20 @@ namespace BasicAlgorithms
                 {
                     if (secquens[i] > secquens[i+1])
                     {
-                        int itemToMove = secquens[i];
-                        secquens.RemoveAt(i);
-                        secquens.Insert(i + 1, itemToMove);
+                        Swap(secquens, i, i+1);
 
                         shouldReSort = true;
                     }
                 }
             } while (shouldReSort); 
             return secquens;
+        }
+
+        private static void Swap(List<int> secquens, int i, int j)
+        {
+            int itemToMove = secquens[i];
+            secquens[i] = secquens[j];
+            secquens[j] = itemToMove;
         }
 
         public static bool EqualsByElements<T>(List<T> collection1, List<T> collection2)
@@ -44,6 +49,20 @@ namespace BasicAlgorithms
                 }
                 return true;
             }
+        }
+
+        public static List<int> QuickSort(List<int> sequence)
+        {
+            int startIndex = 0;
+            int endIndex = sequence.Count - 1;
+            int pivotIndex = GetPivotIndexQuickSort(startIndex, endIndex);
+
+            throw new NotImplementedException();
+        }
+
+        private static int GetPivotIndexQuickSort(int startIndex, int endIndex)
+        {
+            return (endIndex - startIndex) / 2;
         }
     }
 }

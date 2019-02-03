@@ -26,8 +26,19 @@ namespace BasicAlgorithms
             List<int> targetSequence = sequence.OrderBy(r => r).ToList();
 
             List<int> resultSecquens = SortAlgorithms.BubleSort(sequence);
+            bool isSorted = SortAlgorithms.EqualsByElements(resultSecquens, targetSequence);
+
+            Assert.IsTrue(isSorted);
+        }
 
 
+        [TestMethod]
+        public void QuickSortTest()
+        {
+            List<int> sequence = new List<int> { 3, 5, 1, 3, 9, 11, 0, -1 };
+            List<int> targetSequence = sequence.OrderBy(r => r).ToList();
+
+            List<int> resultSecquens = SortAlgorithms.QuickSort(sequence);
             bool isSorted = SortAlgorithms.EqualsByElements(resultSecquens, targetSequence);
 
             Assert.IsTrue(isSorted);
