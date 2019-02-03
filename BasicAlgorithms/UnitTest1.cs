@@ -9,7 +9,7 @@ namespace BasicAlgorithms
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void isEqualsTest()
         {
             List<int> sequence = new List<int> { 3, 5, 1, 3, 9, 11, 0, -1 };
             List<int> targetSequence = sequence.ToList();
@@ -20,7 +20,7 @@ namespace BasicAlgorithms
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void BubleSortTest()
         {
             List<int> sequence = new List<int> { 3, 5, 1, 3, 9, 11, 0, -1 };
             List<int> targetSequence = sequence.OrderBy(r => r).ToList();
