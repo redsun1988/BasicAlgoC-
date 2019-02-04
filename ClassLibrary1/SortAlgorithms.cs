@@ -28,13 +28,6 @@ namespace BasicAlgorithms
             return secquens;
         }
 
-        private static void Swap(List<int> secquens, int i, int j)
-        {
-            int itemToMove = secquens[i];
-            secquens[i] = secquens[j];
-            secquens[j] = itemToMove;
-        }
-
         public static bool EqualsByElements<T>(List<T> collection1, List<T> collection2)
         {
             if (collection1.Count != collection2.Count)
