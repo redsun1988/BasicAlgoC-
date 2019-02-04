@@ -51,6 +51,15 @@ namespace BasicAlgorithms
             }
         }
 
+        #region StrainghtInsertion
+        public static List<int> StrainghtInsertionSort(List<int> sequence)
+        {
+            List<int> newSeqence = new List<int>();
+            return newSeqence;
+        }
+        #endregion
+
+
         public static List<int> QuickSort(List<int> sequence)
         {
             int startIndex = 0;

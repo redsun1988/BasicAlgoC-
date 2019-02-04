@@ -43,5 +43,17 @@ namespace BasicAlgorithms
 
             Assert.IsTrue(isSorted);
         }
+
+        [TestMethod]
+        public void StrainghtInsertionSortTest()
+        {
+            List<int> sequence = new List<int> { 3, 5, 1, 3, 9, 11, 0, -1 };
+            List<int> targetSequence = sequence.OrderBy(r => r).ToList();
+
+            List<int> resultSecquens = SortAlgorithms.StrainghtInsertionSort(sequence);
+            bool isSorted = SortAlgorithms.EqualsByElements(resultSecquens, targetSequence);
+
+            Assert.IsTrue(isSorted);
+        }
     }
 }
