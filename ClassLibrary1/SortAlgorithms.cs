@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -7,25 +8,15 @@ using System.Threading.Tasks;
 
 namespace BasicAlgorithms
 {
-    public class SortAlgorithms
+    public static class SortAlgorithms
     {
-        public static List<int> BubleSort(List<int> secquens)
-        {
-            bool shouldReSort = false;
-            do
-            {
-                shouldReSort = false;
-                for (int i =0; i < secquens.Count - 1; i++)
-                {
-                    if (secquens[i] > secquens[i+1])
-                    {
-                        Swap(secquens, i, i+1);
+        static BubleSort _BubleSort = new BubleSort();
+        static StrainghtInsertionSort _StrainghtInsertionSort = new StrainghtInsertionSort();
+        static QuickSort _QuickSort = new QuickSort();
 
-                        shouldReSort = true;
-                    }
-                }
-            } while (shouldReSort); 
-            return secquens;
+        public static List<int> BubleSort(List<int> sequence)
+        {
+            return _BubleSort.Sort(sequence);
         }
 
         public static bool EqualsByElements<T>(List<T> collection1, List<T> collection2)
@@ -44,27 +35,15 @@ namespace BasicAlgorithms
             }
         }
 
-        #region StrainghtInsertion
         public static List<int> StrainghtInsertionSort(List<int> sequence)
         {
-            List<int> newSeqence = new List<int>();
-            return newSeqence;
+            return _QuickSort.Sort(sequence);
         }
-        #endregion
-
 
         public static List<int> QuickSort(List<int> sequence)
         {
-            int startIndex = 0;
-            int endIndex = sequence.Count - 1;
-            int pivotIndex = GetPivotIndexQuickSort(startIndex, endIndex);
-
-            throw new NotImplementedException();
+            return _StrainghtInsertionSort.Sort(sequence);
         }
 
-        private static int GetPivotIndexQuickSort(int startIndex, int endIndex)
-        {
-            return (endIndex - startIndex) / 2;
-        }
     }
 }

@@ -9,7 +9,7 @@ namespace ClassLibrary1
     public abstract class BaseSort
     {
         public abstract List<int> Sort(List<int> secquens);
-        private static void Swap(List<int> secquens, int i, int j)
+        protected void Swap(List<int> secquens, int i, int j)
         {
             int itemToMove = secquens[i];
             secquens[i] = secquens[j];
