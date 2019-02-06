@@ -8,6 +8,6 @@ namespace ClassLibrary1.SearchAlgorithms
 {
     public abstract class BaseSearch
     {
-        public abstract int Search(List<int> secquens);
+        public abstract int Search(List<int> secquens, int value);
     }
 }

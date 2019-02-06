@@ -14,7 +14,8 @@ namespace ClassLibrary1
             foreach (int value in secquens)
             {
                 int indexToInsert = FindIndextToInsert(newSeqence, value);
-                newSeqence.Insert(indexToInsert, value);
+                if (indexToInsert >= 0)
+                    newSeqence.Insert(indexToInsert, value);
             }
             return newSeqence;
         }

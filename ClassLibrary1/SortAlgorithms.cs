@@ -37,12 +37,12 @@ namespace BasicAlgorithms
 
         public static List<int> StrainghtInsertionSort(List<int> sequence)
         {
-            return _QuickSort.Sort(sequence);
+            return _StrainghtInsertionSort.Sort(sequence);
         }
 
         public static List<int> QuickSort(List<int> sequence)
         {
-            return _StrainghtInsertionSort.Sort(sequence);
+            return _QuickSort.Sort(sequence);
         }
 
     }
