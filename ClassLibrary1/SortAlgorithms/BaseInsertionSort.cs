@@ -10,7 +10,7 @@ namespace ClassLibrary1
     {
         public override List<int> Sort(List<int> secquens)
         {
-            List<int> newSeqence = new List<int>();
+            List<int> newSeqence = new List<int>(secquens.Count);
             foreach (int value in secquens)
             {
                 int indexToInsert = FindIndextToInsert(newSeqence, value);

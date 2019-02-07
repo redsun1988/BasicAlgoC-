@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class StrainghtInsertionSort : BaseInsertionSort
+    public class StraightInsertionSort : BaseInsertionSort
     {
-        public StrainghtInsertionSort()
+        public StraightInsertionSort()
         {
         }
         protected override int FindIndextToInsert(List<int> newSeqence, int value)
