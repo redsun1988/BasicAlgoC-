@@ -6,19 +6,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BasicAlgorithms
 {
     [TestClass]
-    public class UnitTest1
+    public class SortTests
     {
-        [TestMethod]
-        public void isEqualsTest()
-        {
-            List<int> sequence = new List<int> { 3, 5, 1, 3, 9, 11, 0, -1 };
-            List<int> targetSequence = sequence.ToList();
-
-            bool isEqualsByElement = SortAlgorithms.EqualsByElements(sequence, targetSequence);
-
-            Assert.IsTrue(isEqualsByElement);
-        }
-
         [TestMethod]
         public void BubleSortTest()
         {
