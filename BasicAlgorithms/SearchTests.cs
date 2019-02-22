@@ -12,7 +12,7 @@ namespace BasicAlgorithms
         {
             int value = 777;
             List<int> source = new List<int>() { 1, 2, 4, 5, 7, 77, 776, 778, 10 };
-            int valueIndex = SearchAlgorithms.LinearSearch(source, value);
+            int valueIndex = SearchAlgorithms.LinearSearch<int>(source, value);
 
             Assert.AreEqual(valueIndex, -1);
         }
@@ -21,7 +21,7 @@ namespace BasicAlgorithms
         {
             int value = 777;
             List<int> source = new List<int>() { 1, 2, 4, 5, 7, 77, 776, 778, 10, 777 };
-            int valueIndex = SearchAlgorithms.LinearSearch(source, value);
+            int valueIndex = SearchAlgorithms.LinearSearch<int>(source, value);
 
             Assert.AreEqual(valueIndex, source.IndexOf(valueIndex));
         }
