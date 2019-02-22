@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1.SearchAlgorithms
+namespace BasicAlgorithms.SearchAlgorithms
 {
     public abstract class BaseSearch
     {
-        public abstract int Search(List<int> secquens, int value);
+        public abstract int Search<T>(List<T> secquens, T value);
     }
 }

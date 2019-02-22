@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace BasicAlgorithms.SearchAlgorithms
 {
-    //public static class SearchAlgorithms
-    //{
-    //    LinearSearch<T>(source, value)
-    //}
+    public static class SearchAlgorithms
+    {
+        static LinearSearch _lSearch = new LinearSearch();
+        public static int LinearSearch<T>(List<T> source, T value)
+        {
+            return _lSearch.Search<T>(source, value);
+        }
+    }
 }

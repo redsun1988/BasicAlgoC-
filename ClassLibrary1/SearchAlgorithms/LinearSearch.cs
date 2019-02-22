@@ -4,16 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1.SearchAlgorithms
+namespace BasicAlgorithms.SearchAlgorithms
 {
     public class LinearSearch : BaseSearch
     {
-        public override int Search(List<int> secquens, int value)
+        public override int Search<T>(List<T> secquens, T value)
         {
-            for (int i = 0; i < secquens.Count; i++)
-                if (secquens[i] == value)
-                    return i;
-            return -1;
+            var index = 0;
+            int count = secquens.Count;
+
+            //Add terminal value 
+            secquens.Add(value);
+
+            //How to remove ! ???
+            while (!secquens[index].Equals(value)) {
+                index++;
+            }
+            //Remove terminal value
+            secquens.RemoveAt(count);
+
+            if (index == count)
+                return -1;
+            else
+                return index;
         }
     }
 }
