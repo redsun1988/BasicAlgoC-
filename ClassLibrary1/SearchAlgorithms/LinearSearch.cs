@@ -16,7 +16,6 @@ namespace BasicAlgorithms.SearchAlgorithms
             //Add terminal value 
             secquens.Add(value);
 
-            //How to remove ! ???
             while (!secquens[index].Equals(value)) {
                 index++;
             }
